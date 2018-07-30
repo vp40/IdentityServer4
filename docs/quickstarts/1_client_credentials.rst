@@ -92,7 +92,7 @@ This walkthrough assumes you have configured your API to run on ``http://localho
 Add a new controller to your API project::
 
     [Route("identity")]
-    [Authorize]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public class IdentityController : ControllerBase
     {
         [HttpGet]
